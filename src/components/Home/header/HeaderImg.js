@@ -41,7 +41,7 @@ const HeaderImg = () => {
           backgroundPosition: 'center',
           borderStyle: 'solid',
           borderSize: '1px',
-          borderColor: 'error.main',
+          borderColor: 'info.main',
           borderRadius: {
             xl: '15px',
             lg: '15px',

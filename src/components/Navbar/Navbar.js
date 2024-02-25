@@ -3,8 +3,8 @@ import Box from '@mui/material/Box'
 
 const Navbar = () => {
   return (
-    <Box sx={{width: '100%', height: '100px', backgroundColor: 'black'}}>
-
+    <Box sx={{width: '100%', height: '60px', backgroundColor: 'black', marginBottom: '3em'}}>
+yo
     </Box>
   )
 }
