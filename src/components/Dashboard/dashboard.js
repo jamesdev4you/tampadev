@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react'
 import Box from '@mui/material/Box';
 import { ReactComponent as Facebook } from '../../assets/svg/facebook.svg';
 import { ReactComponent as X } from '../../assets/svg/x.svg';
-import { ReactComponent as Blog } from '../../assets/svg/blog.svg';
-import { ReactComponent as CustomerService } from '../../assets/svg/customer-support.svg';
-import { ReactComponent as Email } from '../../assets/svg/email.svg';
+import { ReactComponent as LinkedIn } from '../../assets/svg/linkedin.svg';
+import { ReactComponent as Instagram } from '../../assets/svg/instagram.svg';
+import { ReactComponent as Tiktok } from '../../assets/svg/tik-tok.svg';
 import { ReactComponent as Honey } from '../../assets/svg/honey.svg';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -96,15 +96,15 @@ const handleNavigate = (path) => {
           path: '/twitter-form',
         },
         {
-          logo: Blog,
-          text: 'Blogs',
+          logo: Instagram,
+          text: 'Instagram',
           viewBox: '0 0 512 512',
           key: 3,
         },
         {
-          logo: CustomerService,
-          text: 'ChatBots',
-          viewBox: '0 0 100 100',
+          logo: Tiktok,
+          text: 'TikTok',
+          viewBox: '0 0 512 512',
           key: 4,
         },
         {
@@ -114,9 +114,9 @@ const handleNavigate = (path) => {
           key: 5,
         },
         {
-          logo: Email,
-          text: 'Email',
-          viewBox: '0 0 512 512',
+          logo: LinkedIn,
+          text: 'LinkedIn',
+          viewBox: '0 0 100 100',
           key: 6,
         },
       ];

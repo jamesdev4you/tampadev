@@ -18,15 +18,15 @@ const HeaderText = () => {
 
           }}
         >
-          <Typography variant='h3' sx={{ fontWeight: 'bold' }}>
+          <Typography variant='h1' sx={{ fontWeight: 'bold' }}>
           The Place To <span />
         
       
           </Typography>
-          <Typography variant='h3' sx={{ fontWeight: 'bold',  }}>
+          <Typography variant='h2' sx={{ fontWeight: 'bold',  }}>
            🐝 <span />
         <ReactTyped
-          style={{ color: 'black' }}
+          style={{ color: 'gold' }}
           strings={[
             ' Active.',
             ' Organic.',
@@ -51,7 +51,7 @@ const HeaderText = () => {
               fontWeight: 'bold',
             }}
           >
-            lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            Find your all for one place to gain buzz and traction online! Try out Hive's AI features for free today!
           </Typography>
           <Box
             sx={{

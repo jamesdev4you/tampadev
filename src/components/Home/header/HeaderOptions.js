@@ -67,7 +67,7 @@ const HeaderOptions = () => {
       sx={{
         width: {xl: '80%', lg: '80%', md: '90%', sm: '100%', xs: '100%'},
         height: 'auto',
-        paddingTop: {xs: '6em', sm: '2em'},
+        paddingTop: {xs: '6em', sm: '4em'},
         paddingBottom: '2em',
         
         display: 'flex',

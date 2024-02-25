@@ -23,14 +23,14 @@ const TwitterForm = () => {
     event.preventDefault(); 
 
     const queryParams = new URLSearchParams({ mood, description, tone, }).toString();
-    const url = `http://127.0.0.1:9500/business/create?${queryParams}`;
+    const url = `http://127.0.0.1:9500/ai_api/send_post_request?${queryParams}`;
     console.log('yooo', url);
     try {
       const response = await fetch(url); 
       const data = await response.json(); 
       
 
-      console.log('yooo', data);
+      console.log('gooo', data);
     } catch (error) {
       console.error('Error submitting form:', error);
     }

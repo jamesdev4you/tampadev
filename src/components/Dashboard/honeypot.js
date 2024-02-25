@@ -9,15 +9,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import '../../index.css';
 import {MyHoneyButton, MyHiveButton} from '../styledComponents';
-
-const squareVariants = {
-  visible: { opacity: 1, transition: { duration: 1.5 } },
-  hidden: { opacity: 0 },
-};
 
 const rows = [
     { id: 1, picture: 'Picture URL or Component', text: 'Example Text 1' },
@@ -32,24 +25,10 @@ const rows = [
   
 const Honeypot = () => {
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
 
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
 
   return (
-    <motion.div
-        className='stylesFlexBox'
-        animate={controls}
-        variants={squareVariants}
-        initial='hidden'
-        ref={ref}
-      >
+
     <Box
       sx={{
         height: '100vh',
@@ -106,12 +85,9 @@ const Honeypot = () => {
       <MyHoneyButton onClick={handleDownload}>Download Data</MyHoneyButton>
       <MyHiveButton>Go Back to Hive</MyHiveButton>
       </Box>
-      {/* Replace with IconButton if preferred */}
-      {/* <IconButton onClick={handleDownload} aria-label="download">
-        <DownloadIcon />
-      </IconButton> */}
+
     </Box>
-    </motion.div>
+    
   )
 }
 

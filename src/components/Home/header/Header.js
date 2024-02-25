@@ -27,6 +27,7 @@ const Header = () => {
         marginBottom: '3em',
         height: 'auto',
         flexDirection: 'column',
+        paddingTop: {xs: '0px', sm: '3em'}
       }}
     >
       <Box
