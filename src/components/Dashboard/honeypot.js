@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import beeCursor from '../../assets/pictures/cursor.png';
 import Table from '@mui/material/Table';
@@ -9,8 +9,15 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import '../../index.css';
 import {MyHoneyButton, MyHiveButton} from '../styledComponents';
 
+const squareVariants = {
+  visible: { opacity: 1, transition: { duration: 1.5 } },
+  hidden: { opacity: 0 },
+};
 
 const rows = [
     { id: 1, picture: 'Picture URL or Component', text: 'Example Text 1' },
@@ -22,8 +29,27 @@ const rows = [
     console.log('Implement data download functionality here.');
   };
 
-const honeypot = () => {
+  
+const Honeypot = () => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
+    <motion.div
+        className='stylesFlexBox'
+        animate={controls}
+        variants={squareVariants}
+        initial='hidden'
+        ref={ref}
+      >
     <Box
       sx={{
         height: '100vh',
@@ -85,7 +111,8 @@ const honeypot = () => {
         <DownloadIcon />
       </IconButton> */}
     </Box>
+    </motion.div>
   )
 }
 
-export default honeypot
+export default Honeypot

@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import Ferrari from '../../../assets/pictures/tech.png';
 import '../../../../src/font.css';
 import beeCursor from '../../../assets/pictures/cursor.png';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import '../../../index.css';
 
+const HomeAbout2 = () => {
 
-const homeAbout2 = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  const squareVariants = {
+    visible: { opacity: 1, transition: { duration: 1.5 } },
+    hidden: { opacity: 0 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
+    <motion.div
+        className='stylesFlexBox'
+        animate={controls}
+        variants={squareVariants}
+        initial='hidden'
+        ref={ref}
+      >
     <Box
       sx={{
         backgroundColor: 'warning.main',
@@ -147,7 +171,8 @@ const homeAbout2 = () => {
         }}
       />
     </Box>
+    </motion.div>
   );
 };
 
-export default homeAbout2;
+export default HomeAbout2;

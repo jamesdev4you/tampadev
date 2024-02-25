@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
@@ -6,7 +6,8 @@ import EditNoteIcon from '@mui/icons-material/EditNote';
 import TextField from '@mui/material/TextField';
 import { MyFormButton } from '../styledComponents';
 import beeCursor from '../../assets/pictures/cursor.png';
-
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 
