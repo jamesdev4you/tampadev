@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import HomeAbout from './about/homeAbout';
 import HomeAbout2 from './about/homeAbout2';
 import HomeAbout3 from './about/homeAbout3';
+import beeCursor from '../../assets/pictures/cursor.png';
 
 
 
@@ -20,7 +21,8 @@ const Home = () => {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        gap: '1em'
+        gap: '1em',
+        cursor: `url(${beeCursor}), auto`,
       }}
     >
         <Navbar />

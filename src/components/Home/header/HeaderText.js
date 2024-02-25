@@ -16,19 +16,16 @@ const HeaderText = () => {
             justifyContent: 'start',
           }}
         >
-          <Typography variant='h2' sx={{ fontWeight: 'bold' }}>
-            Bizziest Bees
-          </Typography>
-          <Typography variant='h3' sx={{ fontWeight: 'bold', textAlign: 'center' }}>
-          Busy <span />
+          <Typography variant='h3' sx={{ fontWeight: 'bold' }}>
+          The Place To 🐝 <span />
         <ReactTyped
-          style={{ color: 'red' }}
+          style={{ color: 'black' }}
           strings={[
-            ' develop websites.',
-            ' design websites.',
-            ' do social media marketing.',
-            ' do SEO.',
-            ' help people.',
+            ' Active.',
+            ' Organic.',
+            ' Managable.',
+            ' Productive.',
+            ' Happy.',
           ]}
           typeSpeed={100}
           loop
@@ -36,8 +33,8 @@ const HeaderText = () => {
           cursorChar='|'
           showCursor={true}
         />
-      
           </Typography>
+
           <Typography
             variant='subtitle1'
             sx={{
