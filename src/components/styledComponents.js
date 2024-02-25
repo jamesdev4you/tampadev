@@ -83,6 +83,26 @@ const NavButton = styled(Button)(({ theme }) => ({
   },
 }));
 
+const FormButton = styled(Button)(({ theme }) => ({
+  fontSize: '15px',
+  letterSpacing: '1px',
+  padding: '12px 50px 12px',
+  height: '30px',
+  outline: '0',
+  border: `1px solid ${theme.palette.secondary.main}`,
+  cursor: 'pointer',
+  color: `${theme.palette.primary.main}`,
+  fontWeight: 'bold',
+  position: 'relative',
+  backgroundColor: `${theme.palette.info.main}`,
+  borderRadius: '15px',
+  transition: '0.3s all ease-in-out',
+  fontFamily: 'Birds',
+  '&:hover': {
+    backgroundColor: `${theme.palette.secondary.main}`,
+  },
+}));
+
 export const MyHeaderButton = (props) => (
   <HeaderButton variant='contained'>{props.children}</HeaderButton>
 );
@@ -93,4 +113,8 @@ export const MyNormalButton = (props) => (
 
 export const MyNavButton = (props) => (
   <NavButton variant='contained'><NavLink to='/form' className='nav_links' >{props.children}</NavLink></NavButton>
+);
+
+export const MyFormButton = (props) => (
+  <FormButton variant='contained'>{props.children}</FormButton>
 );
