@@ -14,10 +14,17 @@ const HeaderText = () => {
             flexDirection: 'column',
             alignItems: { xl: 'start', lg: 'start', md: 'start', sm: 'center', xs: 'center' },
             justifyContent: 'start',
+
+
           }}
         >
           <Typography variant='h3' sx={{ fontWeight: 'bold' }}>
-          The Place To 🐝 <span />
+          The Place To <span />
+        
+      
+          </Typography>
+          <Typography variant='h3' sx={{ fontWeight: 'bold',  }}>
+           🐝 <span />
         <ReactTyped
           style={{ color: 'black' }}
           strings={[

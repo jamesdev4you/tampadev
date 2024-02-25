@@ -5,6 +5,8 @@ import Card from '@mui/material/Card';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import TextField from '@mui/material/TextField';
 import { MyFormButton } from '../styledComponents';
+import beeCursor from '../../assets/pictures/cursor.png';
+
 
 
 
@@ -15,12 +17,6 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
-  const handleNameChange = (event) => setName(event.target.value);
-  const handleDescriptionChange = (event) => setDescription(event.target.value);
-  const handleSpecificsChange = (event) => setSpecifics(event.target.value);
-  const handleEmailChange = (event) => setEmail(event.target.value);
-  const handlePasswordChange = (event) => setPassword(event.target.value);
 
   const handleSubmit = async (event) => {
     event.preventDefault(); 
@@ -43,14 +39,16 @@ const LoginForm = () => {
   return (
     <Box
       sx={{
-        height: '110vh',
+        height: 'auto',
+        paddingBottom: '6em',
         width: '100%',
         backgroundColor: 'warning.main',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'start',
         flexDirection: 'column',
-        gap: '6em'
+        gap: '6em',
+        cursor: `url(${beeCursor}), auto`,
       }}
     >
         <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'end', width: '100%', height: '60px', backgroundColor: 'black', marginBottom: '3em', paddingRight: '1em'}}> </Box>
@@ -110,9 +108,13 @@ const LoginForm = () => {
           onChange={(e) => setEmail(e.target.value)}
           color="primary"
           sx={{
+            input: { cursor: `url(${beeCursor}), auto`, },
+            
+            
             width: '80%',
             '& label.Mui-focused': {
               color: 'gold',
+              
             },
             '& .MuiFormLabel-root': {
               color: 'white',
@@ -147,6 +149,7 @@ const LoginForm = () => {
           onChange={(e) => setPassword(e.target.value)}
           color="primary"
           sx={{
+            input: { cursor: `url(${beeCursor}), auto`, },
             width: '80%',
             '& label.Mui-focused': {
               color: 'gold',
@@ -184,6 +187,7 @@ const LoginForm = () => {
           value={description}
           color="primary"
           sx={{
+            input: { cursor: `url(${beeCursor}), auto`, },
             width: '80%',
             '& label.Mui-focused': {
               color: 'gold',
@@ -221,6 +225,7 @@ const LoginForm = () => {
           onChange={(e) => setName(e.target.value)}
           color="primary"
           sx={{
+            input: { cursor: `url(${beeCursor}), auto`, },
             width: '80%',
             '& label.Mui-focused': {
               color: 'gold',
@@ -257,6 +262,7 @@ const LoginForm = () => {
           value={specifics}
           color="primary"
           sx={{
+            input: { cursor: `url(${beeCursor}), auto`, },
             width: '80%',
             '& label.Mui-focused': {
               color: 'gold',

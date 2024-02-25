@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import SvgIcon from '@mui/material/SvgIcon';
-import { ReactComponent as BlogIcon } from '../../../assets/svg/blog.svg';
-import { ReactComponent as DollarIcon } from '../../../assets/svg/dollar.svg';
-import { ReactComponent as HeaterIcon } from '../../../assets/svg/heater.svg';
-import { ReactComponent as OutdoorUnitIcon } from '../../../assets/svg/outdoor-unit.svg';
-import { ReactComponent as PhoneIcon } from '../../../assets/svg/phone-call.svg';
-import { ReactComponent as ThermostatIcon } from '../../../assets/svg/thermostat.svg';
+import { ReactComponent as Facebook } from '../../../assets/svg/facebook.svg';
+import { ReactComponent as X } from '../../../assets/svg/x.svg';
+import { ReactComponent as Blog } from '../../../assets/svg/blog.svg';
+import { ReactComponent as CustomerService } from '../../../assets/svg/customer-support.svg';
+import { ReactComponent as Campaign } from '../../../assets/svg/campaign.svg';
+import { ReactComponent as Email } from '../../../assets/svg/email.svg';
 import Typography from '@mui/material/Typography';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import beeCursor from '../../../assets/pictures/cursor.png';
+
+
 
 const HeaderOptions = () => {
     const [value, setValue] = useState(0);
@@ -22,38 +25,38 @@ const HeaderOptions = () => {
     const [hovered, setHovered] = useState(null);
     const circleOptions = [
     {
-      logo: BlogIcon,
-      text: 'Blogs',
+      logo: Facebook,
+      text: 'Facebook',
       viewBox: '0 0 512 512',
       key: 1,
     },
     {
-      logo: DollarIcon,
-      text: 'Price Estimate',
+      logo: X,
+      text: 'Twitter',
       viewBox: '0 0 512 512',
       key: 2,
     },
     {
-      logo: HeaterIcon,
-      text: 'Heating',
+      logo: Blog,
+      text: 'Blogs',
       viewBox: '0 0 512 512',
       key: 3,
     },
     {
-      logo: OutdoorUnitIcon,
-      text: 'Air Conditioning',
-      viewBox: '0 0 74 74',
+      logo: CustomerService,
+      text: 'ChatBots',
+      viewBox: '0 0 100 100',
       key: 4,
     },
     {
-      logo: PhoneIcon,
-      text: 'Call Now',
+      logo: Campaign,
+      text: 'Outreach',
       viewBox: '0 0 512 512',
       key: 5,
     },
     {
-      logo: ThermostatIcon,
-      text: 'Thermostat',
+      logo: Email,
+      text: 'Email',
       viewBox: '0 0 512 512',
       key: 6,
     },
@@ -91,7 +94,8 @@ const HeaderOptions = () => {
             alignItems: 'center',
             justifyContent: 'center',
             '&:hover': {
-              cursor: 'pointer',
+              cursor: `url(${beeCursor}), auto`,
+
             },
           }}
         >
@@ -120,7 +124,7 @@ const HeaderOptions = () => {
               alignItems: 'center',
               justifyContent: 'center',
               transition: 'all .1s ease-in-out',
-
+              
               boxShadow:
                 hovered === key
                   ? 'rgba(0, 0, 0, 0.2) 0px 18px 50px -10px'
@@ -147,7 +151,7 @@ const HeaderOptions = () => {
                   lg: hovered === key ? '40px' : '35px',
                   xl: hovered === key ? '40px' : '35px',
                 },
-                color: 'secondary.main',
+                color: hovered === key ? 'info.main' : 'secondary.main',
               }}
             ></SvgIcon>
           </Box>
@@ -183,7 +187,9 @@ const HeaderOptions = () => {
             lg: 'none',
             xl: 'none',
           },
+          width: '100%',
           alignItems: 'center',
+          gap: {xs: '0em', sm: '4em'},
           justifyContent: 'center',
           backgroundColor: 'primary.main',
           paddingTop: {

@@ -30,10 +30,16 @@ const HeaderImg = () => {
       <Box
         sx={{
           backgroundImage: `url(${Technician})`,
-          width: '100%',
+          width: {
+            xl: '350px',
+            lg: '250px',
+            md: '200px',
+            sm: '200px',
+            xs: '200px',
+          },
           height: {
             xl: '350px',
-            lg: '300px',
+            lg: '250px',
             md: '200px',
             sm: '200px',
             xs: '200px',

@@ -24,20 +24,21 @@ const Header = () => {
           sm: 'center',
           xs: 'center',
         },
-        height: '100vh',
+        marginBottom: '3em',
+        height: 'auto',
         flexDirection: 'column',
       }}
     >
       <Box
         sx={{
-          width: { xl: '70%', lg: '80%', md: '90%', sm: '90%', xs: '90%' },
+          width: { xl: '70%', lg: '80%', md: '90%', sm: '100%', xs: '100%' },
           display: 'flex',
           flexDirection: {
             xl: 'row',
             lg: 'row',
             md: 'row',
-            sm: 'column',
-            xs: 'column',
+            sm: 'column-reverse',
+            xs: 'column-reverse',
           },
           justifyContent: {
             xl: 'space-between',

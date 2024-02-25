@@ -10,12 +10,13 @@ a.nav_link:hover {
 
 .nav_links {
   text-decoration: none;
-  color: #000000;
+  color: black;
+  cursor: url(./assets//pictures/cursor.png), auto;
 }
 
 .nav_links:hover {
   text-decoration: none;
-  color: #f1f1f1;
+  color: black;
 }
 
 .menu_link {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import Ferr from '../../../assets/pictures/tech.png';
-import '../../../../src/font.css'
+import '../../../../src/font.css';
+import beeCursor from '../../../assets/pictures/cursor.png';
+
 const homeAbout3 = () => {
   return (
     <Box
@@ -149,6 +151,7 @@ const homeAbout3 = () => {
             color: 'white',
             marginRight: 'auto',
             '&:hover': { color: 'gold' },
+            cursor: `url(${beeCursor}), auto`,
           }}
         >
           {' '}

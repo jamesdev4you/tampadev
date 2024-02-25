@@ -4,6 +4,8 @@ import { styled, useTheme } from '@mui/material/styles';
 import '../font.css';
 import { NavLink } from 'react-router-dom';
 import '../navlink.css'
+import beeCursor from '../assets/pictures/cursor.png';
+
 
 const HeaderButton = styled(Button)(({ theme }) => ({
   fontSize: '11px',
@@ -11,7 +13,7 @@ const HeaderButton = styled(Button)(({ theme }) => ({
   letterSpacing: '2px',
   padding: '7px 50px 7px',
   outline: '0',
-  cursor: 'pointer',
+  cursor: `url(${beeCursor}), auto`,
   color: theme.palette.text.primary,
   position: 'relative',
   backgroundColor: 'white',
@@ -51,7 +53,7 @@ const NormalButton = styled(Button)(({ theme }) => ({
   padding: '7px 50px 7px',
   outline: '0',
   border: `1px solid ${theme.palette.error.main}`,
-  cursor: 'pointer',
+  cursor: `url(${beeCursor}), auto`,
   color: `${theme.palette.secondary.main}`,
   position: 'relative',
   backgroundColor: theme.palette.primary.main,
@@ -61,6 +63,7 @@ const NormalButton = styled(Button)(({ theme }) => ({
   '&:hover': {
     color: theme.palette.info.main,
   },
+  
 }));
 
 const NavButton = styled(Button)(({ theme }) => ({
@@ -69,17 +72,18 @@ const NavButton = styled(Button)(({ theme }) => ({
   padding: '7px 50px 7px',
   height: '30px',
   outline: '0',
-  border: `1px solid ${theme.palette.secondary.main}`,
-  cursor: 'pointer',
+  border: `1px solid ${theme.palette.info.main}`,
+  cursor: `url(${beeCursor}), auto`,
   color: `${theme.palette.primary.main}`,
   fontWeight: 'bold',
   position: 'relative',
-  backgroundColor: theme.palette.info.main,
+  backgroundColor: theme.palette.secondary.main,
   borderRadius: '15px',
   transition: '0.3s all ease-in-out',
   fontFamily: 'Birds',
   '&:hover': {
     color: theme.palette.info.main,
+    backgroundColor: theme.palette.info.main,
   },
 }));
 
@@ -90,16 +94,16 @@ const FormButton = styled(Button)(({ theme }) => ({
   height: '30px',
   outline: '0',
   border: `1px solid ${theme.palette.secondary.main}`,
-  cursor: 'pointer',
+  cursor: `url(${beeCursor}), auto`,
   color: `${theme.palette.primary.main}`,
   fontWeight: 'bold',
   position: 'relative',
-  backgroundColor: `${theme.palette.info.main}`,
+  backgroundColor: `${theme.palette.secondary.main}`,
   borderRadius: '15px',
   transition: '0.3s all ease-in-out',
   fontFamily: 'Birds',
   '&:hover': {
-    backgroundColor: `${theme.palette.secondary.main}`,
+    backgroundColor: `${theme.palette.info.main}`,
   },
 }));
 

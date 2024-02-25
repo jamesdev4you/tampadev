@@ -9,6 +9,7 @@ import beeCursor from '../../assets/pictures/cursor.png';
 
 
 
+
 const Home = () => {
   return (
     
