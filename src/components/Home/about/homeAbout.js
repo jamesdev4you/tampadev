@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import Ferrari from '../../../assets/pictures/tech.png';
+import WorkingBees from '../../../assets/pictures/workingbees.png';
 import '../../../../src/font.css'
 import beeCursor from '../../../assets/pictures/cursor.png';
 import { useAnimation, motion } from 'framer-motion';
@@ -85,7 +85,7 @@ const HomeAbout = () => {
             sm: '400px',
             xs: '250px',
           },
-          background: `url(${Ferrari})`,
+          background: `url(${WorkingBees})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',

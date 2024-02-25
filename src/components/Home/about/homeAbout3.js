@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import Ferr from '../../../assets/pictures/tech.png';
+import MarketingBee from '../../../assets/pictures/marketingbee.png';
 import '../../../../src/font.css';
 import beeCursor from '../../../assets/pictures/cursor.png';
 import { useAnimation, motion } from 'framer-motion';
@@ -90,7 +90,7 @@ const HomeAbout3 = () => {
             sm: '400px',
             xs: '250px',
           },
-          background: `url(${Ferr})`,
+          background: `url(${MarketingBee})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',

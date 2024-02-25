@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import Ferrari from '../../../assets/pictures/tech.png';
+import ChillBee from '../../../assets/pictures/chillbee.png';
 import '../../../../src/font.css';
 import beeCursor from '../../../assets/pictures/cursor.png';
 import { useAnimation, motion } from 'framer-motion';
@@ -162,7 +162,7 @@ const HomeAbout2 = () => {
             sm: '400px',
             xs: '250px',
           },
-          background: `url(${Ferrari})`,
+          background: `url(${ChillBee})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
