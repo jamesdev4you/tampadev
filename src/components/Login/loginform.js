@@ -26,12 +26,13 @@ const LoginForm = () => {
     event.preventDefault(); 
 
     const queryParams = new URLSearchParams({ name, description, specifics, email, password }).toString();
-    const url = `/business/create?${queryParams}`;
+    const url = `http://127.0.0.1:9500/business/create?${queryParams}`;
     console.log('yooo', url);
     try {
       const response = await fetch(url); 
       const data = await response; 
-  
+      console.log(`Requesting URL: ${url}`);
+
       console.log('yooo', data);
     } catch (error) {
       console.error('Error submitting form:', error);
