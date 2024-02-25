@@ -14,7 +14,7 @@ import Tab from '@mui/material/Tab';
 const HeaderOptions = () => {
     const [value, setValue] = useState(0);
 
-    // Removed TypeScript type annotations for JavaScript
+
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
@@ -69,6 +69,7 @@ const HeaderOptions = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        
       }}
     >
       {circleOptions.map(({ logo, text, viewBox, key }) => (
@@ -102,7 +103,7 @@ const HeaderOptions = () => {
               letterSpacing: '1px',
               lineHeight: '50px',
               transition: 'all .1s ease-in-out',
-              textDecoration: hovered === key ? 'underline' : 'none',
+              
               zIndex: '100',
               color: 'primary.main',
             }}
@@ -119,9 +120,7 @@ const HeaderOptions = () => {
               alignItems: 'center',
               justifyContent: 'center',
               transition: 'all .1s ease-in-out',
-              borderStyle: hovered === key ? 'solid' : 'none',
-              borderSize: hovered === key ? '2px' : 'none',
-              borderColor: hovered === key ? 'info.main' : 'none',
+
               boxShadow:
                 hovered === key
                   ? 'rgba(0, 0, 0, 0.2) 0px 18px 50px -10px'

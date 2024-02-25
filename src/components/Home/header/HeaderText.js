@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { MyNormalButton } from '../../styledComponents'
+import { ReactTyped } from 'react-typed';
 
 const HeaderText = () => {
     return (
@@ -19,7 +20,23 @@ const HeaderText = () => {
             Bizziest Bees
           </Typography>
           <Typography variant='h3' sx={{ fontWeight: 'bold', textAlign: 'center' }}>
-          Make dreams come true
+          Busy <span />
+        <ReactTyped
+          style={{ color: 'red' }}
+          strings={[
+            ' develop websites.',
+            ' design websites.',
+            ' do social media marketing.',
+            ' do SEO.',
+            ' help people.',
+          ]}
+          typeSpeed={100}
+          loop
+          backSpeed={70}
+          cursorChar='|'
+          showCursor={true}
+        />
+      
           </Typography>
           <Typography
             variant='subtitle1'

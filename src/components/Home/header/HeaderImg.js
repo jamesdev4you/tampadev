@@ -6,8 +6,10 @@ const HeaderImg = () => {
   return (
     <Box
       sx={{
-        position: 'relative',
-        width: { xl: '40%', lg: '1000px', md: '800px', sm: '90%', xs: '100%' },
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: { xl: '40%', lg: '800px', md: '800px', sm: '90%', xs: '100%' },
         height: {
           xl: '350px',
           lg: '250px',
@@ -16,9 +18,9 @@ const HeaderImg = () => {
           xs: '200px',
         },
         backgroundColor: {
-          xl: 'primary.main',
-          lg: 'primary.main',
-          md: 'primary.main',
+          xl: 'none',
+          lg: 'none',
+          md: 'none',
           sm: 'none',
           xs: 'none',
         },
@@ -31,7 +33,7 @@ const HeaderImg = () => {
           width: '100%',
           height: {
             xl: '350px',
-            lg: '250px',
+            lg: '300px',
             md: '200px',
             sm: '200px',
             xs: '200px',
@@ -39,9 +41,6 @@ const HeaderImg = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'none',
           backgroundPosition: 'center',
-          borderStyle: 'solid',
-          borderSize: '1px',
-          borderColor: 'info.main',
           borderRadius: {
             xl: '15px',
             lg: '15px',
@@ -49,28 +48,8 @@ const HeaderImg = () => {
             sm: '0px',
             xs: '0px',
           },
-          position: 'absolute',
-          top: {
-            xl: '10px',
-            lg: '10px',
-            md: '10px',
-            sm: '0px',
-            xs: '0px',
-          },
-          left: {
-            xl: '10px',
-            lg: '10px',
-            md: '10px',
-            sm: '0px',
-            xs: '0px',
-          },
-          boxShadow: {
-            xl: 'none',
-            lg: 'none',
-            md: 'none',
-            sm: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
-            xs: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
-          },
+
+
         }}
       />
     </Box>
