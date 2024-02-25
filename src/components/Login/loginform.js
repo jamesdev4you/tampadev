@@ -26,19 +26,19 @@ const LoginForm = () => {
     event.preventDefault(); 
 
     const queryParams = new URLSearchParams({ name, description, specifics, email, password }).toString();
-    const url = `http://127.0.0.1:9500/business/create?${queryParams}`;
-
+    const url = `/business/create?${queryParams}`;
+    console.log('yooo', url);
     try {
       const response = await fetch(url); 
-      const data = await response.json(); 
-
-      
-      console.log(data);
+      const data = await response; 
+  
+      console.log('yooo', data);
     } catch (error) {
       console.error('Error submitting form:', error);
     }
   };
 
+  
   return (
     <Box
       sx={{
@@ -92,23 +92,21 @@ const LoginForm = () => {
                   <EditNoteIcon name="services" sx={{ height: { xs: '50px', sm: '100px' }, width: { xs: '50px', sm: '100px' }, color: 'black' }} />
 
                 </Box>
-                <Box sx={{
-                  display: 'flex',
-                  gap: '30px',
+                
+                   
+                   <form onSubmit={handleSubmit} style={{gap: '30px', display: 'flex',
+                  
                   justifyContent: 'center',
                   alignItems: 'center',
-                  width: { xs: '90%', sm: '100%' },
+                  width:'90%',
                   flexDirection: 'column',
-                  marginTop: '1em'
-                }}
-                >
-                   
-                   <form onSubmit={handleSubmit}>
+                  marginTop: '1em'}}>
         <TextField
           error
           id="outlined-error"
           label="Email"
           value={email}
+          onChange={(e) => setEmail(e.target.value)}
           color="primary"
           sx={{
             width: '80%',
@@ -145,6 +143,7 @@ const LoginForm = () => {
           id="outlined-error"
           label="Password"
           value={password}
+          onChange={(e) => setPassword(e.target.value)}
           color="primary"
           sx={{
             width: '80%',
@@ -180,6 +179,7 @@ const LoginForm = () => {
           error
           id="outlined-error"
           label="Business Description"
+          onChange={(e) => setDescription(e.target.value)}
           value={description}
           color="primary"
           sx={{
@@ -217,6 +217,7 @@ const LoginForm = () => {
           id="outlined-error"
           label="Business Name"
           value={name}
+          onChange={(e) => setName(e.target.value)}
           color="primary"
           sx={{
             width: '80%',
@@ -249,8 +250,8 @@ const LoginForm = () => {
           }}
         />
         <TextField
-          error
-          id="outlined-error"
+          
+          onChange={(e) => setSpecifics(e.target.value)}
           label="Business Focus"
           value={specifics}
           color="primary"
@@ -286,7 +287,7 @@ const LoginForm = () => {
         />
         < MyFormButton children="Submit"/>
         </form>
-                   </Box>
+                  
                 
                 
               </Card>
