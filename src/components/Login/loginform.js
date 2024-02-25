@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
@@ -9,6 +9,36 @@ import { MyFormButton } from '../styledComponents';
 
 
 const LoginForm = () => {
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [specifics, setSpecifics] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  const handleNameChange = (event) => setName(event.target.value);
+  const handleDescriptionChange = (event) => setDescription(event.target.value);
+  const handleSpecificsChange = (event) => setSpecifics(event.target.value);
+  const handleEmailChange = (event) => setEmail(event.target.value);
+  const handlePasswordChange = (event) => setPassword(event.target.value);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault(); 
+
+    const queryParams = new URLSearchParams({ name, description, specifics, email, password }).toString();
+    const url = `http://127.0.0.1:9500/business/create?${queryParams}`;
+
+    try {
+      const response = await fetch(url); 
+      const data = await response.json(); 
+
+      
+      console.log(data);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -73,12 +103,12 @@ const LoginForm = () => {
                 }}
                 >
                    
-        
+                   <form onSubmit={handleSubmit}>
         <TextField
           error
           id="outlined-error"
           label="Email"
-          
+          value={email}
           color="primary"
           sx={{
             width: '80%',
@@ -114,7 +144,7 @@ const LoginForm = () => {
           error
           id="outlined-error"
           label="Password"
-          
+          value={password}
           color="primary"
           sx={{
             width: '80%',
@@ -150,7 +180,7 @@ const LoginForm = () => {
           error
           id="outlined-error"
           label="Business Description"
-          
+          value={description}
           color="primary"
           sx={{
             width: '80%',
@@ -186,7 +216,7 @@ const LoginForm = () => {
           error
           id="outlined-error"
           label="Business Name"
-          
+          value={name}
           color="primary"
           sx={{
             width: '80%',
@@ -222,7 +252,7 @@ const LoginForm = () => {
           error
           id="outlined-error"
           label="Business Focus"
-          
+          value={specifics}
           color="primary"
           sx={{
             width: '80%',
@@ -255,7 +285,7 @@ const LoginForm = () => {
           }}
         />
         < MyFormButton children="Submit"/>
-        
+        </form>
                    </Box>
                 
                 

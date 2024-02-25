@@ -116,5 +116,5 @@ export const MyNavButton = (props) => (
 );
 
 export const MyFormButton = (props) => (
-  <FormButton variant='contained'>{props.children}</FormButton>
+  <FormButton variant='contained' type="submit">{props.children}</FormButton>
 );
