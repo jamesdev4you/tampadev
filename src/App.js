@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
+import LoginForm from './components/Login/loginform';
 
 
 const theme = createTheme({
@@ -66,6 +67,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <Routes>
       <Route path='/' element={<Home />} />
+      <Route path="/form" element={<LoginForm />} />
       <Route path='*' element={<Home />} />
     </Routes>
     </ThemeProvider>

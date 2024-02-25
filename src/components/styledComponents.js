@@ -2,6 +2,8 @@ import Button from '@mui/material/Button';
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import '../font.css';
+import { NavLink } from 'react-router-dom';
+import '../navlink.css'
 
 const HeaderButton = styled(Button)(({ theme }) => ({
   fontSize: '11px',
@@ -61,10 +63,34 @@ const NormalButton = styled(Button)(({ theme }) => ({
   },
 }));
 
+const NavButton = styled(Button)(({ theme }) => ({
+  fontSize: '10px',
+  letterSpacing: '1px',
+  padding: '7px 50px 7px',
+  height: '30px',
+  outline: '0',
+  border: `1px solid ${theme.palette.secondary.main}`,
+  cursor: 'pointer',
+  color: `${theme.palette.primary.main}`,
+  fontWeight: 'bold',
+  position: 'relative',
+  backgroundColor: theme.palette.info.main,
+  borderRadius: '15px',
+  transition: '0.3s all ease-in-out',
+  fontFamily: 'Birds',
+  '&:hover': {
+    color: theme.palette.info.main,
+  },
+}));
+
 export const MyHeaderButton = (props) => (
   <HeaderButton variant='contained'>{props.children}</HeaderButton>
 );
 
 export const MyNormalButton = (props) => (
   <NormalButton variant='contained'>{props.children}</NormalButton>
+);
+
+export const MyNavButton = (props) => (
+  <NavButton variant='contained'><NavLink to='/form' className='nav_links' >{props.children}</NavLink></NavButton>
 );
