@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
 import { ReactComponent as X } from '../../assets/svg/x.svg';
 import TextField from '@mui/material/TextField';
-import { MyFormButton } from '../styledComponents';
+import { MyXButton } from '../styledComponents';
 import beeCursor from '../../assets/pictures/cursor.png';
 import SvgIcon from '@mui/material/SvgIcon';
 
@@ -222,7 +222,7 @@ const TwitterForm = () => {
             },
           }}
         />
-        < MyFormButton children="Submit"/>
+        < MyXButton children="Submit"/>
         </form>
                   
                 
