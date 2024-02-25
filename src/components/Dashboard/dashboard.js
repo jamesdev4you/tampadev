@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import Box from '@mui/material/Box';
-import { ReactComponent as BlogIcon } from '../../assets/svg/blog.svg';
-import { ReactComponent as DollarIcon } from '../../assets/svg/dollar.svg';
-import { ReactComponent as HeaterIcon } from '../../assets/svg/heater.svg';
-import { ReactComponent as OutdoorUnitIcon } from '../../assets/svg/outdoor-unit.svg';
+import { ReactComponent as Facebook } from '../../assets/svg/facebook.svg';
+import { ReactComponent as X } from '../../assets/svg/x.svg';
+import { ReactComponent as Blog } from '../../assets/svg/blog.svg';
+import { ReactComponent as CustomerService } from '../../assets/svg/customer-support.svg';
+import { ReactComponent as Email } from '../../assets/svg/email.svg';
 import { ReactComponent as Honey } from '../../assets/svg/honey.svg';
-import { ReactComponent as ThermostatIcon } from '../../assets/svg/thermostat.svg';
+
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import SvgIcon from '@mui/material/SvgIcon';
@@ -70,32 +71,33 @@ const handleNavigate = (path) => {
           path: '/honey-pot',
         },
         {
-          logo: DollarIcon,
-          text: 'Price Estimate',
+          logo: X,
+          text: 'Twitter',
           viewBox: '0 0 512 512',
           key: 2,
+          path: '/twitter-form',
         },
         {
-          logo: HeaterIcon,
-          text: 'Heating',
+          logo: Blog,
+          text: 'Blogs',
           viewBox: '0 0 512 512',
           key: 3,
         },
         {
-          logo: OutdoorUnitIcon,
-          text: 'Air Conditioning',
-          viewBox: '0 0 74 74',
+          logo: CustomerService,
+          text: 'ChatBots',
+          viewBox: '0 0 100 100',
           key: 4,
         },
         {
-          logo: BlogIcon,
-          text: 'Blogs',
+          logo: Facebook,
+          text: 'Outreach',
           viewBox: '0 0 512 512',
           key: 5,
         },
         {
-          logo: ThermostatIcon,
-          text: 'Thermostat',
+          logo: Email,
+          text: 'Email',
           viewBox: '0 0 512 512',
           key: 6,
         },

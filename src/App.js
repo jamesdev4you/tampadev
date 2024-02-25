@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import LoginForm from './components/Login/loginform';
 import Dashboard from './components/Dashboard/dashboard';
 import Honeypot from './components/Dashboard/honeypot';
+import TwitterForm from './components/Dashboard/twitterform';
 
 
 const theme = createTheme({
@@ -72,6 +73,8 @@ function App() {
       <Route path="/form" element={<LoginForm />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/honey-pot" element={<Honeypot />} />
+      <Route path="/twitter-form" element={<TwitterForm />} />
+
       <Route path='*' element={<Home />} />
       
     </Routes>
