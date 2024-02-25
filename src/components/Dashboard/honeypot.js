@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import '../../index.css';
-import {MyHoneyButton, MyHiveButton} from '../styledComponents';
+import {MyHoneyButton, MyHiveButton, } from '../styledComponents';
 
 const rows = [
     { id: 1, picture: 'Picture URL or Component', text: 'Example Text 1' },

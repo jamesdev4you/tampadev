@@ -6,8 +6,7 @@ import EditNoteIcon from '@mui/icons-material/EditNote';
 import TextField from '@mui/material/TextField';
 import { MyFormButton } from '../styledComponents';
 import beeCursor from '../../assets/pictures/cursor.png';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+
 
 
 
