@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import LoginForm from './components/Login/loginform';
+import Dashboard from './components/Dashboard/dashboard';
 
 
 const theme = createTheme({
@@ -68,7 +69,9 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path="/form" element={<LoginForm />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path='*' element={<Home />} />
+      
     </Routes>
     </ThemeProvider>
   );

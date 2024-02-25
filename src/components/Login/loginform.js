@@ -30,8 +30,8 @@ const LoginForm = () => {
     console.log('yooo', url);
     try {
       const response = await fetch(url); 
-      const data = await response; 
-      console.log(`Requesting URL: ${url}`);
+      const data = await response.json(); 
+      
 
       console.log('yooo', data);
     } catch (error) {
