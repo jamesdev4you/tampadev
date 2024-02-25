@@ -4,17 +4,21 @@ import { ReactComponent as BlogIcon } from '../../assets/svg/blog.svg';
 import { ReactComponent as DollarIcon } from '../../assets/svg/dollar.svg';
 import { ReactComponent as HeaterIcon } from '../../assets/svg/heater.svg';
 import { ReactComponent as OutdoorUnitIcon } from '../../assets/svg/outdoor-unit.svg';
-import { ReactComponent as PhoneIcon } from '../../assets/svg/phone-call.svg';
+import { ReactComponent as Honey } from '../../assets/svg/honey.svg';
 import { ReactComponent as ThermostatIcon } from '../../assets/svg/thermostat.svg';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import SvgIcon from '@mui/material/SvgIcon';
 import { styled } from '@mui/system';
+import beeCursor from '../../assets/pictures/cursor.png';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Hexagon = styled('div')(({ theme }) => ({
     width: '150px',
     height: '86.6px', 
-    backgroundColor: '	#ea9d3e',
+    backgroundColor: 'gold',
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -33,33 +37,37 @@ const Hexagon = styled('div')(({ theme }) => ({
     },
     '&::before': {
       bottom: '100%',
-      borderBottom: '43.3px solid 	#ea9d3e', 
+      borderBottom: '43.3px solid 	gold', 
 
 
     },
     '&::after': {
       top: '100%',
-      borderTop: '43.3px solid 	#ea9d3e', 
+      borderTop: '43.3px solid 	gold', 
 
 
     },
   }));
 
 const Dashboard = () => {
-    const [value, setValue] = useState(0);
 
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
+  const navigate = useNavigate();
+
+const handleNavigate = (path) => {
+  navigate(path);
+};
+
+  
   
     const [hovered, setHovered] = useState(null);
 
     const hiveOptions = [
         {
-          logo: BlogIcon,
-          text: 'Blogs',
+          logo: Honey,
+          text: 'Honey Pot',
           viewBox: '0 0 512 512',
           key: 1,
+          path: '/honey-pot',
         },
         {
           logo: DollarIcon,
@@ -80,8 +88,8 @@ const Dashboard = () => {
           key: 4,
         },
         {
-          logo: PhoneIcon,
-          text: 'Call Now',
+          logo: BlogIcon,
+          text: 'Blogs',
           viewBox: '0 0 512 512',
           key: 5,
         },
@@ -97,23 +105,40 @@ const Dashboard = () => {
     <Box
       sx={{
         height: 'auto',
+        minHeight: '100vh',
         width: '100%',
-        backgroundColor: 'warning.main',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
         gap: '5em',
         paddingBottom: '3em',
+        backgroundColor: 'black',
+        cursor: `url(${beeCursor}), auto`,
+        paddingTop: {xs:'3em', sm: '0em'},
       }}
     >
-                <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'end', width: '100%', height: '60px', backgroundColor: 'black', marginBottom: '1em', paddingRight: '1em'}}> </Box>
-                <Typography variant='h1' sx={{ fontWeight: 'bold', textDecoration: 'underline', width: '100%', textAlign: 'center' }}>
-                    Welcome to the <span style={{color: 'darkgold'}}>BeeHive</span>
+                <Box sx={{textAlign:'center', width: {xs: '80%', sm: '100%'}, flexDirection: 'column', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <Typography variant='h2' sx={{ fontWeight: 'bold', textDecoration: 'underline', width: '100%', textAlign: 'center', color: 'white' }}>
+                    Welcome to the Hive
                 </Typography>
-                <Grid container spacing={6} sx={{width: '90%', height: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <Typography
+            variant='h5'
+            sx={{
+              width: '80%',
+              textAlign:'center',
+              marginTop: '1em',
+              marginBottom: '1em',
+              fontWeight: 'bold',
+              color: 'white'
+            }}
+          >
+            Dive into the Hive and create content! All content created will be stored in your Honey Pot.
+          </Typography>
+          </Box>
+                <Grid container spacing={6} sx={{width: '90%', height: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
                     {hiveOptions.map((item) => (
-                        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} key={item.key}  sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} key={item.key} onClick={() => handleNavigate(item.path)} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                             <Hexagon>
                             <SvgIcon
                             onMouseEnter={() => setHovered(item.key)}
@@ -122,21 +147,13 @@ const Dashboard = () => {
               component={item.logo}
               sx={{
                 transition: 'all .2s ease-in-out',
-                height: {
-                  xs: '30px',
-                  sm: '60px',
-                  md: hovered === item.key ? '40px' : '30px',
-                  lg: hovered === item.key ? '40px' : '75px',
-                  xl: hovered === item.key ? '40px' : '35px',
-                },
+                height: 
+                   hovered === item.key ? '80px' : '70px',
+                 
 
-                width: {
-                  xs: '30px',
-                  sm: '60px',
-                  md: hovered === item.key ? '40px' : '30px',
-                  lg: hovered === item.key ? '40px' : '75px',
-                  xl: hovered === item.key ? '40px' : '35px',
-                },
+                width: 
+                  hovered === item.key ? '80px' : '70px',
+                
                 color: 'primary.main',
               }}
             ></SvgIcon>

@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import LoginForm from './components/Login/loginform';
 import Dashboard from './components/Dashboard/dashboard';
+import Honeypot from './components/Dashboard/honeypot';
 
 
 const theme = createTheme({
@@ -70,6 +71,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path="/form" element={<LoginForm />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/honey-pot" element={<Honeypot />} />
       <Route path='*' element={<Home />} />
       
     </Routes>

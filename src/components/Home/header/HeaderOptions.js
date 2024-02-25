@@ -116,8 +116,8 @@ const HeaderOptions = () => {
           </Typography>
           <Box
             sx={{
-              height: { md: '80px', lg: '70px', xl: '90px' },
-              width: { md: '80px', lg: '70px', xl: '90px' },
+              height: { md: '80px', lg: '80px', xl: '90px' },
+              width: { md: '80px', lg: '80px', xl: '90px' },
               backgroundColor: 'primary.main',
               borderRadius: '50%',
               display: 'flex',
@@ -139,7 +139,7 @@ const HeaderOptions = () => {
                 height: {
                   xs: '30px',
                   sm: '60px',
-                  md: hovered === key ? '40px' : '30px',
+                  md: hovered === key ? '50px' : '40px',
                   lg: hovered === key ? '40px' : '35px',
                   xl: hovered === key ? '40px' : '35px',
                 },
@@ -147,7 +147,7 @@ const HeaderOptions = () => {
                 width: {
                   xs: '30px',
                   sm: '60px',
-                  md: hovered === key ? '40px' : '30px',
+                  md: hovered === key ? '50px' : '40px',
                   lg: hovered === key ? '40px' : '35px',
                   xl: hovered === key ? '40px' : '35px',
                 },
